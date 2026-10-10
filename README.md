@@ -21,19 +21,20 @@ students pogect
 
 
 ```mermaid
-usecaseDiagram
-    actor Пользователь
-    package "Менеджер задач" {
-        usecase "Добавить задачу" as UC1
-        usecase "Удалить задачу" as UC2
-        usecase "Отметить выполненной" as UC3
-        usecase "Фильтровать задачи" as UC4
-        usecase "Ввести текст" as UC1_1
-    }
-    Пользователь --> UC1
-    Пользователь --> UC2
-    Пользователь --> UC3
-    Пользователь --> UC4
-    UC1 ..> UC1_1 : include
-
+flowchart LR
+    actor((Пользователь))
+    
+    subgraph "Менеджер задач"
+        UC1([Добавить задачу])
+        UC2([Удалить задачу])
+        UC3([Отметить выполненной])
+        UC4([Фильтровать задачи])
+        UC1_1([Ввести текст])
+    end
+    
+    actor --> UC1
+    actor --> UC2
+    actor --> UC3
+    actor --> UC4
+    UC1 -.->|include| UC1_1
 ```
