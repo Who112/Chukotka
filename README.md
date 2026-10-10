@@ -21,7 +21,7 @@ students pogect
 
 
 ```mermaid
-    usecaseDiagram
+usecaseDiagram
     actor Пользователь
     package "Менеджер задач" {
         usecase "Добавить задачу" as UC1
